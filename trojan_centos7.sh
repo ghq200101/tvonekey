@@ -61,7 +61,7 @@ if [ $real_addr == $local_addr ] ; then
 	#设置伪装站
 	rm -rf /usr/share/nginx/html/*
 	cd /usr/share/nginx/html/
-	wget https://raw.githubusercontent.com/wangn9900/tvonekey/master/web.zip
+	wget https://raw.githubusercontent.com/ghq200101/tvonekey/master/web.zip
     	unzip web.zip
 	systemctl start nginx.service
 	#申请https证书
@@ -74,10 +74,10 @@ if [ $real_addr == $local_addr ] ; then
         --reloadcmd  "systemctl force-reload  nginx.service"
 	if test -s /usr/src/trojan-cert/fullchain.cer; then
         cd /usr/src
-	wget https://github.com/trojan-gfw/trojan/releases/download/v1.13.0/trojan-1.13.0-linux-amd64.tar.xz
+	wget https://github.com/trojan-gfw/trojan/releases/download/v1.14.1/trojan-1.14.1-linux-amd64.tar.xz
 	tar xf trojan-1.*
 	#下载trojan客户端
-	wget https://raw.githubusercontent.com/wangn9900/tvonekey/master/trojan-cli.zip
+	wget https://raw.githubusercontent.com/ghq200101/tvonekey/master/trojan-cli.zip
 	unzip trojan-cli.zip
 	cp /usr/src/trojan-cert/fullchain.cer /usr/src/trojan-cli/fullchain.cer
 	trojan_passwd=$(cat /dev/urandom | head -1 | md5sum | head -c 8)
