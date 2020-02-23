@@ -74,7 +74,7 @@ if [ $real_addr == $local_addr ] ; then
         --reloadcmd  "systemctl force-reload  nginx.service"
 	if test -s /usr/src/trojan-cert/fullchain.cer; then
         cd /usr/src
-	wget https://github.com/trojan-gfw/trojan/releases/download/v1.14.1/trojan-1.14.1-linux-amd64.tar.xz
+	wget https://github.com/trojan-gfw/trojan/releases/download/v1.12.3/trojan-1.12.3-linux-amd64.tar.xz
 	tar xf trojan-1.*
 	#下载trojan客户端
 	wget https://raw.githubusercontent.com/ghq200101/tvonekey/master/trojan-cli.zip
